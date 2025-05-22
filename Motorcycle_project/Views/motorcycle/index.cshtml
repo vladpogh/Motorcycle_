@@ -1,0 +1,25 @@
+﻿@model IEnumerable<MotorcycleMarketplace.Models.Motorcycle>
+
+<h2>Motorcycles</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var motorcycle in Model)
+        {
+            <tr>
+                <td>@motorcycle.Brand</td>
+                <td>@motorcycle.Model</td>
+                <td>@motorcycle.Price</td>
+                <td><a href="@Url.Action("Edit", "Motorcycle", new { id = motorcycle.Id })">Edit</a> | <a href="@Url.Action("Delete", "Motorcycle", new { id = motorcycle.Id })">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
