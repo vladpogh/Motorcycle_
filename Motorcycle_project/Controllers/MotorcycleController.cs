@@ -11,7 +11,6 @@ public class MotorcycleController : Controller
         _context = context;
     }
 
-    // GET: Motorcycles
     public async Task<IActionResult> Index()
     {
         var motorcycles = await _context.Motorcycles.ToListAsync();
