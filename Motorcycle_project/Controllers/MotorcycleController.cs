@@ -21,7 +21,6 @@ public class MotorcycleController : Controller
         return View();
     }
 
-    // POST: Motorcycles/Create
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("Id,Brand,Model,Description,Price,ImageUrl")] Motorcycle motorcycle)
