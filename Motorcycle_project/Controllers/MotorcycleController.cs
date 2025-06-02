@@ -16,8 +16,6 @@ public class MotorcycleController : Controller
         var motorcycles = await _context.Motorcycles.ToListAsync();
         return View(motorcycles);
     }
-
-    // GET: Motorcycles/Create
     public IActionResult Create()
     {
         return View();
