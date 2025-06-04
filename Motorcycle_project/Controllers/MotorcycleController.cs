@@ -8,7 +8,7 @@ public class MotorcycleController : Controller
 
     public MotorcycleController(ApplicationDbContext context)
     {
-        _cotext = context;
+        _context = context;
     }
 
     public async Task<IActionResult> Index()
