@@ -10,7 +10,7 @@ namespace Motorcycle_project.Controllers
 
         public HomeController(ILogger<HomeController> logger)
         {
-            _logger = logger;
+            _logger = lgger;
         }
 
         public IActionResult Index()
