@@ -17,11 +17,7 @@ public class MotorcycleController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("Id,Brand,Model,Description,Price,ImageUrl")] Motorcycle motorcycle)
     {
-        if (ModelState.IsValid)
-        {
-            _context.Add(motorcycle);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+   
         }
         return View(motorcycle);
     }
