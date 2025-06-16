@@ -1,0 +1,9 @@
+<div class="container mt-4" >
+<h2 class="mb-4" > Мотори в магазина</h2 >
+<div class="row" >
+@foreach (var moto in Model) {
+    <div class="col-md-4 mb-4"> <div class="card h-100"> <img src="@moto.ImageUrl" class="card-img-top" alt="@moto.Brand @moto.Model" /> <div class="card-body d-flex flex-column"> <h5 class="card-title">@moto.Brand @moto.Model</h5> <p class="card-text flex-grow-1">@moto.Description</p> <p class="card-text fw-bold">Цена: @moto.Price лв.</p> <a asp-action="Details" asp-route-id="@moto.Id" class="btn btn-primary mt-auto">Детайли</a> </div> </div> </div>
+}
+
+</div >
+</div >

@@ -1,0 +1,7 @@
+﻿@model MotorcycleStore.Models.Motorcycle
+
+<h2>@Model.Brand @Model.Model</h2>
+<img src="@Model.ImageUrl" width="300" />
+<p>@Model.Description</p>
+<p><strong>Цена:</strong> @Model.Price лв.</p>
+<a asp-action="Buy" asp-route-id="@Model.Id">Купи</a>

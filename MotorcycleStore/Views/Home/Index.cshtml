@@ -1,0 +1,20 @@
+﻿@model IEnumerable<MotorcycleStore.Models.Motorcycle>
+
+<h2>Нашите мотори</h2>
+
+<div class="row">
+    @foreach (var moto in Model)
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img class="card-img-top" src="@moto.ImageUrl" alt="@moto.Brand @moto.Model" />
+                <div class="card-body">
+                    <h5 class="card-title">@moto.Brand @moto.Model</h5>
+                    <p class="card-text">@moto.Description</p>
+                    <p class="card-text"><strong>Цена: @moto.Price лв.</strong></p>
+                    <a asp-action="Details" asp-route-id="@moto.Id" class="btn btn-primary">Детайли</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

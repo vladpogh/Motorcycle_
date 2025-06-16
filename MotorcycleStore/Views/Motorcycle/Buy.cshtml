@@ -1,0 +1,20 @@
+﻿@model MotorcycleStore.Models.Order
+
+<h2>Поръчай мотор</h2>
+
+<form asp-action="Buy" method="post">
+    <input type="hidden" asp-for="MotorcycleId" />
+    <div>
+        <label>Име</label>
+        <input asp-for="CustomerName" required />
+    </div>
+    <div>
+        <label>Телефон</label>
+        <input asp-for="PhoneNumber" required />
+    </div>
+    <div>
+        <label>Град</label>
+        <input asp-for="City" required />
+    </div>
+    <button type="submit">Поръчай</button>
+</form>

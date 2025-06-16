@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MotorcycleStore.Models.Motorcycle>
+
+<h2>Админ панел – Мотори</h2>
+<a asp-action="Create">Добави нов мотор</a>
+<table>
+    <thead>
+        <tr>
+            <th>Марка</th>
+            <th>Модел</th>
+            <th>Цена</th>
+            <th>Действия</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>@m.Brand</td>
+                <td>@m.Model</td>
+                <td>@m.Price лв.</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@m.Id">Редактирай</a> |
+                    <a asp-action="Delete" asp-route-id="@m.Id">Изтрий</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

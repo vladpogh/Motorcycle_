@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MotorcycleStore.Models.Order>
+
+<h2>Поръчки</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Клиент</th>
+            <th>Телефон</th>
+            <th>Град</th>
+            <th>Мотор</th>
+            <th>Дата</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var o in Model)
+        {
+            <tr>
+                <td>@o.CustomerName</td>
+                <td>@o.PhoneNumber</td>
+                <td>@o.City</td>
+                <td>@o.Motorcycle.Brand @o.Motorcycle.Model</td>
+                <td>@o.DateCreated.ToLocalTime()</td>
+            </tr>
+        }
+    </tbody>
+</table>
